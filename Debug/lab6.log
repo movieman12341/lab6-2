@@ -1,0 +1,3 @@
+﻿  main.c
+c:\users\luke\desktop\lab6\lab6\main.c(92): warning C4133: 'function': incompatible types - from 'double (__cdecl *)(const void *,const void *)' to '_CoreCrtNonSecureSearchSortCompareFunction'
+  lab6.vcxproj -> C:\Users\Luke\Desktop\lab6\Debug\lab6.exe
