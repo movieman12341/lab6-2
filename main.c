@@ -5,11 +5,12 @@
 #include <math.h>
 
 int numVertices, numEdges;
-int *parent, *weight, numTrees;
-
+int *parent, numTrees;
+int *weight;		//me added. original = int
 
 struct edge {
-	int tail, head, weight;
+	int tail, head;
+	double weight;			//double changed
 };
 typedef struct edge edgeType;
 edgeType *edgeTab;
@@ -62,8 +63,9 @@ double weightAscending(const void* xin, const void* yin)
 
 int main()
 {
-	int i, MSTweight = 0;
+	int i;
 	int root1, root2;
+	double MSTweight = 0;	//double changed
 
 	scanf("%d", &numVertices);
 	
@@ -71,7 +73,7 @@ int main()
 
 	edgeTab = (edgeType*)malloc(numEdges * sizeof(edgeType));
 	parent = (int*)malloc(numVertices * sizeof(int));
-	weight = (int*)malloc(numVertices * sizeof(int));
+	weight = (int*)malloc(numVertices * sizeof(int));			//double changed
 	if (!edgeTab || !parent || !weight)
 	{
 		printf("error 2\n");
@@ -83,9 +85,9 @@ int main()
 	for (i = 0; i < numVertices; i++)
 	{
 		scanf("%d %d", &edgeTab[i].tail, &edgeTab[i].head);
-		parent[i] = i;
 	}
 
+	int edgeCount = 0;
 	//permutate all edges to find all edge connections
 	for (i = 0; i < numVertices; i++)
 	{
@@ -97,10 +99,23 @@ int main()
 			finalX = pow(finalX, 2);
 			double ans = finalX + finalY;
 			ans = sqrt(ans);
+
+			if (edgeCount < numEdges) //room in array
+			{
+				/*weight[weightCount] = ans;
+				weightCount++;*/
+				edgeTab[edgeCount].weight = ans;
+				printf("%lf\n", edgeTab[edgeCount].weight);
+				edgeCount++;
+			}
+			
 		}
 	}
 
-
+	for (i = 0; i < numEdges; i++)
+	{
+		printf("%d\n", edgeTab[i].weight);
+	}
 		
 	for (i = 0; i<numVertices; i++)
 	{

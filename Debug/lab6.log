@@ -1,3 +1,7 @@
 ﻿  main.c
-c:\users\luke\desktop\lab6\lab6\main.c(92): warning C4133: 'function': incompatible types - from 'double (__cdecl *)(const void *,const void *)' to '_CoreCrtNonSecureSearchSortCompareFunction'
+c:\users\luke\desktop\lab6\lab6\main.c(126): warning C4133: 'function': incompatible types - from 'double (__cdecl *)(const void *,const void *)' to '_CoreCrtNonSecureSearchSortCompareFunction'
+c:\users\luke\desktop\lab6\lab6\main.c(117): warning C4477: 'printf' : format string '%d' requires an argument of type 'int', but variadic argument 1 has type 'double'
+c:\users\luke\desktop\lab6\lab6\main.c(132): warning C4477: 'printf' : format string '%d' requires an argument of type 'int', but variadic argument 3 has type 'double'
+c:\users\luke\desktop\lab6\lab6\main.c(136): warning C4477: 'printf' : format string '%d' requires an argument of type 'int', but variadic argument 3 has type 'double'
+c:\users\luke\desktop\lab6\lab6\main.c(144): warning C4477: 'printf' : format string '%d' requires an argument of type 'int', but variadic argument 1 has type 'double'
   lab6.vcxproj -> C:\Users\Luke\Desktop\lab6\Debug\lab6.exe
